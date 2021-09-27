@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+    font-size: 35px;
+    
+}
+
+
+
+#enlaces a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+
+.icono{
+    display: block;
+    z-index: 100;
+    color: white;
+    animation: MoverIzquierda 1s ease-in;
+}
+
+header{
+    background: #40E0D0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    width: 100%;
+    padding: 50px;
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+}
+
+img{
+    display: block;
+    height: 370px;
+    object-fit: cover;
+    width: auto;
+    animation: MoverArriba 1s ease-in;
+}
+
+.textos{
+    width: 50%;
+    color: white;
+}
+
+.textos h1{
+    font-size: 65px;
+    animation: MoverDerecha 1s ease-in;
+}
+
+.textos h2{
+    font-size: 35px;
+    animation: MoverIzquierda 1s ease-in;
+}
+
+.textos a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    margin-top: 10px;
+    border: solid 1px #ffff;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 10px;
+    animation: MoverArriba 1s ease-in;
+}
+
+.facebook :hover{
+    color: #1196e4;
+}
+
+.twitter :hover{
+    color: #1196e4;
+}
+
+.youtube :hover{
+    color: red;
+}
+
+
+.wave{
+    width: 100%;
+    height: 100%;
+    background: #40E0D0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.uno{
+    clip-path: circle(0% at 0 0);
+}
+
+.dos{
+    clip-path: circle(95% at 0 0);
+}
+
+.enlaces{
+    
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    width: 100%;
+    transition: all 1s ease;
+    background: #40E0D0 url(../img/music.png) no-repeat;
+
+}
+
+@keyframes MoverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes MoverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes MoverArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width:1025px){
+    img{
+        height: 300px;
+    }
+    .container{
+        width: 100%;
+        height: 404px;
+    }
+}
+
+@media screen and (max-width:800px){
+    img{
+        height: 250px;
+    }
+    .textos h1{
+        font-size: 40px;
+    }  
+    .textos h2{
+        font-size: 30px;
+    }
+    
+    .textos a{
+        font-size: 18px;
+    }
+    .dos{
+        clip-path: circle(100% at 0 0);
+    }
+}
+@media screen and (max-width:700px){
+    img{
+        height: 220px;
+    }
+    .textos h1{
+        font-size: 30px;
+    }  
+    .textos h2{
+        font-size: 20px;
+    }
+    
+    .textos a{
+        font-size: 15px;
+    }
+    .dos{
+        clip-path: circle(102% at 0 0);
+    }
+}
+@media screen and (max-width:451px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    
+
+    .textos{
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 30px;
+    }  
+    .textos h2{
+        font-size: 20px;
+    }
+    
+    .textos a{
+        font-size: 12px;
+    }
+    .dos{
+        clip-path: circle(150% at 0 0);
+    }
+}
+@media screen and (max-width:340px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    img{
+        height: 200px;
+    }
+
+    .textos{
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 30px;
+    }  
+    .textos h2{
+        font-size: 20px;
+    }
+    
+    .textos a{
+        font-size: 12px;
+    }
+    .dos{
+        clip-path: circle(150% at 0 0);
+    }
+}
+
