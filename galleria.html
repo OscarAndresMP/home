@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="plugins/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="plugins/Atumm/css/AutumnLeaf.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>PagePrincipal</title>
+    <title>galleria</title>
 </head>
 <body>
 
-
     <section>
 
-        <article>
+        <article id="navegacion">
             <div class="menu">
             <input id="menu--toggle" type="checkbox" />
             <!-- /#menu--toggle -->
@@ -57,25 +56,26 @@
         </article>
         </section>
 
-
-
-
-
-
-    <header>
-        <div class="container">    
-            <div class="textos">
-                <h1>Camus Medina </h1>
-                <h2>La Musica es Vida</h2>
-                <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com/" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.youtube.com/" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
-            </div>
-            <img src="img/music.png" alt="">
+    <div class="contendorGaleria">
+        <div class="galleria">
+            <img src="img/camus1.jpeg">
+            <img src="img/camus2.jpeg">
+            <img src="img/camus3.jpeg">
+            <img src="img/camus4.jpeg">
+            <img src="img/camus5.jpeg">
         </div>
-    </header>
+        <center>
+            <a href="#" class="videos" id="videos"></a>>
+            
+        </center>
 
-
+        <div class="galleria" class="Gvi">
+            <a href="https://www.youtube.com/watch?v=Zn62h-uOd4s&ab_channel=OscarMorales"><img src="img/camusVideo1.PNG"></a>
+            <a href="https://www.youtube.com/watch?v=4k-yHogvAuY&ab_channel=OscarMorales"><img src="img/videoCamus2.PNG"></a>
+            <a href="https://www.youtube.com/watch?v=L8kPhS5KUQk&ab_channel=OscarMorales"><img src="img/videoCamus3.PNG"></a>
+            
+        </div>
+    </div>
 
     <div class="wave">
         <div style="height: 100px; overflow: hidden;" >
@@ -86,12 +86,11 @@
         </div>
     </div>
 
-
-
-
     <script src="plugins/Atumm/js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.shuffleLetters.js"></script>
     <script src="plugins/Atumm/js/greensock.js"></script>
     <script src="plugins/Atumm/js/AutumnLeaf.min.js"></script>
+    <script src="Galleria/galleria.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

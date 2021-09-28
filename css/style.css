@@ -11,38 +11,8 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-nav{
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-nav a{
-    text-decoration: none;
-    color:black;
-    font-size: 35px;
-    
-}
-
-
-
-#enlaces a:hover{
-    color: white;
-    font-weight: bold;
-}
-
-
-.icono{
-    display: block;
-    z-index: 100;
-    color: white;
-    animation: MoverIzquierda 1s ease-in;
-}
-
 header{
-    background: #40E0D0;  /* fallback for old browsers */
+    background: #40E0D0;
     background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: auto;
@@ -180,7 +150,11 @@ img{
     }
     .container{
         width: 100%;
-        height: 404px;
+        height: 100%;
+    }
+    .wave{
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -197,11 +171,19 @@ img{
     
     .textos a{
         font-size: 18px;
+    
     }
-    .dos{
-        clip-path: circle(100% at 0 0);
+
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .wave{
+        width: 100%;
+        height: 100%;
     }
 }
+
 @media screen and (max-width:700px){
     img{
         height: 220px;
@@ -216,8 +198,14 @@ img{
     .textos a{
         font-size: 15px;
     }
-    .dos{
-        clip-path: circle(102% at 0 0);
+
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .wave{
+        width: 100%;
+        height: 100%;
     }
 }
 @media screen and (max-width:451px){
@@ -241,17 +229,25 @@ img{
     .textos a{
         font-size: 12px;
     }
-    .dos{
-        clip-path: circle(150% at 0 0);
+
+    .container{
+        width: 100%;
+        height: 100%;
     }
+    .wave{
+        width: 100%;
+        height: 100%;
+    }
+
 }
-@media screen and (max-width:340px){
+@media screen and (max-width:341px){
     .container{
         width: 100%;
         flex-wrap: wrap-reverse;
         justify-content: center;
     }
     img{
+        margin-top: 30px;
         height: 200px;
     }
 
@@ -268,8 +264,229 @@ img{
     .textos a{
         font-size: 12px;
     }
-    .dos{
-        clip-path: circle(150% at 0 0);
+
+    .container{
+        width: 100%;
+        height: 100%;
     }
+    .wave{
+        width: 100%;
+        height: 100px;
+    }
+    
 }
+
+
+
+
+
+
+/* menu */
+#menu--toggle[type=checkbox]:not(:checked),
+#menu--toggle[type=checkbox]:checked {
+display: none;
+}
+
+.menu--toggle__trigger,
+.menu--toggle__burger,
+.menu--toggle__burger:before,
+.menu--toggle__burger:after {
+position: absolute;
+top: 1.6em;
+left: 1.6em;
+width: 2em;
+height: 5px;
+background-color: #282828;
+border-radius: 2px;
+cursor: pointer;
+z-index: 100;
+transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.menu--toggle__trigger {
+height: 2em;
+background: none;
+}
+
+.menu--toggle__burger:before {
+content: "";
+top: 10px;
+left: 0;
+}
+.menu--toggle__burger:after {
+content: "";
+top: 20px;
+left: 0;
+}
+
+
+/* fondo del menu */
+.menu__body {
+position: absolute;
+width: 7em;
+height: 7em;
+margin: 0;
+padding: 0;
+background-color: #fcfcfc;
+border-bottom-right-radius: 100%;
+box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2);
+z-index: 10;
+-webkit-animation: checkboxUncheckedAnimation 0.35s both;
+animation: checkboxUncheckedAnimation 0.35s both;
+}
+
+.menu__body-element,
+.menu__body-link {
+display: none;
+margin: 4.4em 0 -3.3em -0.1em;
+font-weight: normal;
+color: #282828;
+text-decoration: none;
+text-transform: none;
+list-style: none;
+outline: 0;
+font-size: 30px;
+}
+
+.menu__body-element {
+text-indent: 2em;
+}
+
+/* resaltar opciones del menu */
+.menu__body-link:hover {
+color:#22f606;
+}
+
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger {
+top: 35px;
+transform: rotate(405deg);
+transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:before {
+top: 0;
+transform: rotate(-90deg);
+transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:after {
+top: 0;
+transform: rotate(90deg);
+transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger + .menu__body {
+-webkit-animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
+#menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-element, #menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-link {
+display: block;
+}
+
+
+/* posicion del menu */
+.promotion {
+width: 100vw;
+height: 100vh;
+max-height: 0px;
+}
+
+
+
+
+@-webkit-keyframes checkboxCheckedAnimation {
+50% {
+    width: 100vw;
+    height: 100vh;
+}
+100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+}
+
+@keyframes checkboxCheckedAnimation {
+50% {
+    width: 100vw;
+    height: 100vh;
+}
+100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+}
+@-webkit-keyframes checkboxUncheckedAnimation {
+0% {
+    width: 100vw;
+    height: 100vh;
+}
+}
+@keyframes checkboxUncheckedAnimation {
+0% {
+    width: 100vw;
+    height: 100vh;
+}
+}
+
+
+@-webkit-keyframes changeWidthOfElementAnimation {
+50% {
+    width: 0;
+}
+100% {
+    width: 100%;
+}
+}
+
+
+@keyframes changeWidthOfElementAnimation {
+50% {
+    width: 0;
+}
+100% {
+    width: 100%;
+}
+}
+
+
+/* galeria */
+.galleria{
+max-width: 700px;
+width: 100%;
+height: 600px;
+margin: auto;
+padding: 40px;
+position: relative;
+
+}
+
+.videos{
+    max-width: 500px;
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding:5px;
+    animation: MoverIzquierda 1.5s ease-in;
+}
+
+.contendorGaleria{
+
+    background: #40E0D0;
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+
+
+
+
 

@@ -1,14 +1,3 @@
-let menu = document.getElementById("icono");
-let enlaces = document.getElementById("enlaces");
-let cont = 0;
-
-menu.addEventListener("click", () => {
-    if(cont === 0){
-        enlaces.className = ("enlaces dos");
-        cont = 1;
-
-
-        
 $.AutumnLeafStart({
 	leavesfolder: "Music/",
 	howmanyimgsare: 4,
@@ -21,11 +10,29 @@ $.AutumnLeafStart({
 });
 
 
+(function() {
+    Galleria.loadTheme('Galleria/themes/folio/galleria.folio.min.js');
+    Galleria.run('.galleria');
+}());
+
+
+
+
+let titutloAnimado = $("#videos");
+const mensajesCarrusel = ['Galeria', 'Trabajos Realizados', 'La Musica es Vida', 'Servicios'];
+let contador = 0;
+titutloAnimado.text( mensajesCarrusel[0] );
+//titutloAnimado.shuffleLetters();
+
+setInterval(() => {
+    contador++;
+    if( contador >= mensajesCarrusel.length )
+    {
+        contador = 0;
     }
-    else{
-        enlaces.classList.remove("dos");
-        enlaces.className = ("enlaces uno");
-        cont = 0;
-        
-    }
-});
+    titutloAnimado.shuffleLetters({
+        "text": mensajesCarrusel[ contador]
+    });
+
+}, 4000);
+/* titutloAnimado.shuffleLetters(); */
