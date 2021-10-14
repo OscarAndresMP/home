@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="plugins/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="plugins/Atumm/css/AutumnLeaf.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>galleria</title>
+    <link rel="stylesheet" href="css/styleGallery.css">
+    <title>Galleria</title>
 </head>
 <body>
 
     <section>
-
         <article id="navegacion">
             <div class="menu">
             <input id="menu--toggle" type="checkbox" />
-            <!-- /#menu--toggle -->
             <label class="menu--toggle__trigger" for="menu--toggle"></label>
-            <!-- /.menu--toggle__trigger -->
             <label class="menu--toggle__burger" for="menu--toggle"></label>
-            <!-- /.menu--toggle__burger -->
 
             <ul class="menu__body">
                 <li class="menu__body-element">
@@ -39,7 +35,7 @@
                 
                 </li>
                 <li class="menu__body-element">
-                <a class="menu__body-link" href="#">
+                <a class="menu__body-link" href="contact.html">
                     <i class="bi bi-person-lines-fill"></i>
                     Contacto
                 </a>
@@ -50,47 +46,72 @@
             
             </div>
         </article>
+
+
+
+
         <article>
-            <div class="promotion">
-            </div>
+            <div class="promotion"></div>
         </article>
         </section>
 
-    <div class="contendorGaleria">
-        <div class="galleria">
-            <img src="img/camus1.jpeg">
-            <img src="img/camus2.jpeg">
-            <img src="img/camus3.jpeg">
-            <img src="img/camus4.jpeg">
-            <img src="img/camus5.jpeg">
-        </div>
         <center>
-            <a href="#" class="videos" id="videos"></a>>
-            
+            <a href="#" class="titulo" id="titulo"></a>
         </center>
 
-        <div class="galleria" class="Gvi">
-            <a href="https://www.youtube.com/watch?v=Zn62h-uOd4s&ab_channel=OscarMorales"><img src="img/camusVideo1.PNG"></a>
-            <a href="https://www.youtube.com/watch?v=4k-yHogvAuY&ab_channel=OscarMorales"><img src="img/videoCamus2.PNG"></a>
-            <a href="https://www.youtube.com/watch?v=L8kPhS5KUQk&ab_channel=OscarMorales"><img src="img/videoCamus3.PNG"></a>
-            
-        </div>
+        <div class="body">    
+        <ul class="ul">
+            <li class="li">
+                <a href="#" class="a" title="Imagen 1">
+                    <img src="img/camus1.jpeg" alt="Imagen 1" class="img" loading="lazy">
+                </a>
+            </li>
+            <li class="li">
+                <a href="#" class="a" title="Imagen 2">
+                    <img src="img/camus2.jpeg" alt="Imagen 2" class="img" loading="lazy">
+                </a>
+            </li>
+            <li class="li">
+                <a href="#" class="a" title="Imagen 3">
+                    <img src="img/camus3.jpeg" alt="Imagen 3" class="img" loading="lazy">
+                </a>
+            </li>
+            <li class="li">
+                <a href="#" class="a" title="Imagen 2">
+                    <img src="img/camus4.jpeg" alt="Imagen 4" class="img" loading="lazy">
+                </a>
+        </li>
+        <li class="li">
+            <a href="#" class="a" title="Imagen 3">
+                <img src="img/camus5.jpeg" alt="Imagen 5" class="img" loading="lazy">
+            </a>
+        </li>
+        <li class="li">
+            <a href="#" class="a" title="Imagen 3">
+                <img src="img/camus5.jpeg" alt="Imagen 5" class="img" loading="lazy">
+            </a>
+        </li>
+    </ul>
     </div>
+    
+    
+    <div class="lightbox">
+        <button class="cerrar">X</button>
+        <img src="img/camus1.jpeg" alt="Imagen 1" class="grande" loading="lazy">
+    </div>
+    
+    <center>
+    <div class="galleria">
+        <a href="https://www.youtube.com/watch?v=Zn62h-uOd4s&ab_channel=OscarMorales"><img src="img/camusVideo1.PNG"></a>
+        <a href="https://www.youtube.com/watch?v=4k-yHogvAuY&ab_channel=OscarMorales"><img src="img/videoCamus2.PNG"></a>
+        <a href="https://www.youtube.com/watch?v=L8kPhS5KUQk&ab_channel=OscarMorales"><img src="img/videoCamus3.PNG"></a>
+    </div>
+    </center>
 
-    <div class="wave">
-        <div style="height: 100px; overflow: hidden;" >
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M0.00,49.66 C150.00,148.99 349.20,-49.65 500.00,49.66 L500.00,148.99 L0.00,148.99 Z" style="stroke: none; fill: #fff;">
-                </path>
-            </svg>
-        </div>
-    </div>
 
     <script src="plugins/Atumm/js/jquery-2.1.4.min.js"></script>
     <script src="js/jquery.shuffleLetters.js"></script>
-    <script src="plugins/Atumm/js/greensock.js"></script>
-    <script src="plugins/Atumm/js/AutumnLeaf.min.js"></script>
     <script src="Galleria/galleria.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/appGallery.js"></script>
 </body>
 </html>
